@@ -1,3 +1,15 @@
+import sys
+import os
+
+
+# Set JAVA_HOME to the JDK installation directory
+os.environ["JAVA_HOME"] = "C:\\Program Files\\Java\\jdk-17"  # Update this path as needed
+os.environ["PATH"] = os.environ["JAVA_HOME"] + "\\bin;" + os.environ["PATH"]
+
+# Add the src directory to sys.path
+sys.path.append(os.path.abspath(
+    r"C:/Users/Acer/Documents/GitHub/timefold-quickstarts/python/vehicle-routing/src"
+))
 from vehicle_routing.rest_api import json_to_vehicle_route_plan, app
 
 from fastapi.testclient import TestClient
